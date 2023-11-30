@@ -1,0 +1,11 @@
+h1, h2 {
+    color:  #1F2261;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    line-height: normal;
+    background-color: #F6F6F6;
+    box-sizing: border-box;
+}
