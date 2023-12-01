@@ -1,19 +1,16 @@
 import React, { FC } from "react";
-import { ICurrency } from "../App";
 interface IHeader {
-  currency: ICurrency;
+  currency: [string, number][]
 }
 
 const Header: FC<IHeader> = ({ currency }) => {
   console.log(currency);
-
+  
   return (
-    <div>
-      {Object.entries(currency).map(([sign, value]) => {
-        return <p>{`${sign} : ${value}`}</p>;
+    <div className="flex gap-20 justify-center pt-2 pb-4">
+      {currency.map(([sign, value]) => {
+        return <p className="text-base " key={value}>{`${sign} : ${value}`}</p>;
       })}
-
-      <button>usd</button>
     </div>
   );
 };
